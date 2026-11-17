@@ -1,0 +1,18 @@
+{
+  "name": "@kubeswift/design",
+  "version": "0.1.0",
+  "private": true,
+  "description": "KubeSwift design system: tokens, logos, fonts, diagram rules and slide kits.",
+  "scripts": {
+    "build": "node scripts/build-tokens.mjs",
+    "check": "node scripts/build-tokens.mjs --check && node scripts/check-colors.mjs",
+    "kit": "node kits/pptx/generate.cjs"
+  },
+  "devDependencies": {
+    "pptxgenjs": "4.0.1",
+    "sharp": "0.35.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
