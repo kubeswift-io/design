@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "KubeSwift design system: tokens, logos, fonts, diagram rules and slide kits.",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "node scripts/build-tokens.mjs",
     "check": "node scripts/build-tokens.mjs --check && node scripts/check-colors.mjs",
