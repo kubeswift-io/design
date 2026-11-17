@@ -43,3 +43,7 @@ npm run kit     # regenerate the PowerPoint kit
 ```
 
 Read [AGENTS.md](AGENTS.md) before changing anything. CI runs `npm run check` and `npm run kit` on every pull request.
+
+## Licence
+
+Apache-2.0, see [LICENSE](LICENSE). The fonts in [`fonts/`](fonts/) are licensed separately under the SIL Open Font License; each family's licence sits next to its files. The KubeSwift name and logo identify the KubeSwift project: use them to refer to KubeSwift, following the logo rules in [docs/brand.md](docs/brand.md), and not to suggest endorsement.
