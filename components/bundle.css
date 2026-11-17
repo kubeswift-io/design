@@ -1,0 +1,82 @@
+/* KubeSwift slide and page components. Colours and lengths come from tokens.json; the only literal is white on navy, which never changes with the theme. */
+body { margin: 0; font-family: var(--font-sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+.ks-pad { padding: var(--space-24); display: flex; flex-wrap: wrap; gap: var(--space-24); align-items: center; }
+.ks-col { display: flex; flex-direction: column; gap: var(--space-16); align-items: flex-start; }
+/* Slide-scale components are sized for 1920 x 1080; .ks-half shows them at half size in a page. */
+.ks-half { zoom: 0.5; }
+.ks-grid { background-color: var(--bg); background-image: linear-gradient(var(--grid) 2px, transparent 2px), linear-gradient(90deg, var(--grid) 2px, transparent 2px); background-size: var(--space-48) var(--space-48); }
+
+/* Lockup */
+.ks-lockup { display: inline-flex; align-items: center; gap: 0.3em; font-size: 33px; letter-spacing: -0.02em; line-height: 1; color: var(--brand-ink); }
+.ks-lockup svg { width: 1.4em; height: 1.4em; flex: none; }
+.ks-lockup .ks-mark { fill: var(--brand-ink); }
+.ks-lockup .ks-kube { font-weight: 400; }
+.ks-lockup .ks-swift { font-weight: 700; color: var(--brand-swift); }
+.ks-lockup.ks-on-dark { color: #FFFFFF; }
+.ks-lockup.ks-on-dark .ks-mark { fill: #FFFFFF; }
+.ks-lockup.ks-on-dark .ks-swift { color: var(--teal); }
+.ks-lockup.ks-stacked { flex-direction: column; gap: 0.42em; }
+.ks-lockup.ks-stacked svg { width: 2.1em; height: 2.1em; }
+.ks-dark-ground { background: var(--navy); }
+
+/* Eyebrow and slide header */
+.ks-eyebrow { font-family: var(--font-mono); font-size: 24px; letter-spacing: 0.16em; line-height: 1; color: var(--accent); text-transform: uppercase; }
+.ks-slide-title { margin: 28px 0 0; font-size: 64px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--ink); }
+.ks-slide-sub { margin: 18px 0 0; font-size: 38px; line-height: 1.35; color: var(--sub); }
+
+/* Diagram node */
+.ks-node { box-sizing: border-box; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--space-12); min-width: 300px; padding: 26px 32px; border: var(--stroke-node) solid var(--stroke); border-radius: var(--radius-node); background: transparent; text-align: center; }
+.ks-node-title { font-size: 34px; font-weight: 600; line-height: 1; letter-spacing: -0.01em; color: var(--ink); }
+.ks-node-sub { font-size: 26px; line-height: 1.2; color: var(--sub); }
+.ks-node.ks-teal { background: var(--tint-teal); }
+.ks-node.ks-blue { background: var(--tint-blue); }
+.ks-node.ks-strong { background: var(--accent-fill); border-color: var(--accent-fill); }
+.ks-node.ks-strong .ks-node-title { color: var(--on-accent-fill); }
+.ks-node.ks-strong .ks-node-sub { color: var(--accent-fill-sub); }
+.ks-node.ks-dashed { border-style: dashed; }
+.ks-arrow { width: 72px; height: 24px; flex: none; }
+.ks-arrow path { fill: none; stroke: var(--stroke); stroke-width: var(--stroke-node); stroke-linecap: round; stroke-linejoin: round; }
+.ks-group { position: relative; box-sizing: border-box; padding: 64px 28px 28px; border: var(--stroke-node) dashed var(--accent); border-radius: var(--radius-node); }
+.ks-group-label { position: absolute; top: 18px; left: 22px; font-family: var(--font-mono); font-size: 24px; line-height: 1; color: var(--accent); }
+
+/* Tag */
+.ks-tag { display: inline-block; font-family: var(--font-mono); font-size: 21px; font-weight: 500; letter-spacing: 0.08em; line-height: 1.2; padding: 7px 14px; border-radius: var(--radius-node); white-space: nowrap; text-transform: uppercase; color: var(--ink); border: var(--stroke-rule) solid var(--ink); }
+.ks-tag.ks-fill { background: var(--teal); border-color: var(--teal); color: var(--on-speed); }
+.ks-tag.ks-dashed { border-style: dashed; border-color: var(--accent); color: var(--accent); }
+
+/* Column header */
+.ks-colhead { box-sizing: border-box; width: 760px; border-top: var(--stroke-rule) solid var(--ink); padding-top: 22px; display: flex; align-items: center; gap: var(--space-16); }
+.ks-colhead-label { font-family: var(--font-mono); font-size: 24px; letter-spacing: 0.12em; line-height: 1; color: var(--accent); text-transform: uppercase; }
+.ks-colhead-body { margin: 22px 0 0; width: 760px; font-size: 30px; line-height: 1.4; color: var(--sub); }
+
+/* Code panel */
+.ks-code { box-sizing: border-box; width: 960px; padding: 40px 48px; border-radius: var(--radius-panel); background: var(--code-bg); font-family: var(--font-mono); font-size: 28px; line-height: 1.65; color: var(--code-ink); overflow: hidden; }
+.ks-code-line { white-space: pre; }
+.ks-code-num { color: var(--code-muted); }
+.ks-code-key { color: var(--code-key); }
+.ks-code-val { color: var(--code-value); }
+.ks-code-line.ks-hl { background: var(--code-highlight); margin: 0 -48px; padding: 0 44px; border-left: var(--stroke-highlight) solid var(--teal); }
+
+/* Annotation */
+.ks-annot { display: inline-flex; align-items: flex-end; gap: var(--space-12); font-family: var(--font-hand); font-size: 34px; line-height: 1.3; color: var(--accent); transform: rotate(-3deg); }
+.ks-annot svg { width: 64px; height: 48px; flex: none; }
+.ks-annot path { fill: none; stroke: var(--accent); stroke-width: var(--stroke-node); stroke-linecap: round; stroke-linejoin: round; }
+
+/* Section divider (always on navy) */
+.ks-divider { box-sizing: border-box; width: 1920px; height: 540px; padding: var(--slide-pad-x); background: var(--navy); display: flex; flex-direction: column; justify-content: center; gap: var(--space-24); }
+.ks-divider-num { font-family: var(--font-mono); font-size: 180px; line-height: 1; letter-spacing: -0.04em; color: var(--teal); }
+.ks-divider-title { margin: 0; font-size: 132px; font-weight: 700; line-height: 0.95; letter-spacing: -0.05em; color: #FFFFFF; }
+
+/* Chevron loader */
+.ks-loader { display: inline-flex; gap: 12px; padding: 28px 40px; border-radius: 14px; background: var(--navy); }
+.ks-loader svg { width: 20px; height: 20px; animation: ks-streak 1.3s linear infinite; }
+.ks-loader path { fill: none; stroke: var(--teal); stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+.ks-loader svg:nth-child(2) { animation-delay: 0.16s; }
+.ks-loader svg:nth-child(3) { animation-delay: 0.32s; }
+.ks-loader.ks-on-light { background: transparent; }
+.ks-loader.ks-on-light path { stroke: var(--brand-ink); }
+@keyframes ks-streak { 0% { transform: translateX(-9px); opacity: 0; } 28% { opacity: 1; } 100% { transform: translateX(16px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .ks-loader svg { animation: none; opacity: 1; } }
+
+/* Takeaway line */
+.ks-takeaway { box-sizing: border-box; width: 1680px; border-top: var(--stroke-hair) solid var(--rule); padding-top: 22px; font-size: 32px; font-weight: 700; line-height: 1.3; color: var(--ink); }

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KubeSwift design</title>
+<link rel="stylesheet" href="tokens/tokens.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding-block: var(--space-48) var(--space-64); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-16); flex-wrap: wrap; }
+  .lockup { display: inline-flex; align-items: center; gap: 12px; font-size: 26px; letter-spacing: -0.02em; color: var(--brand-ink); }
+  .lockup svg { width: 36px; height: 36px; } .lockup path { fill: var(--brand-ink); }
+  .lockup b { color: var(--brand-swift); font-weight: 700; }
+  .eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; color: var(--accent); text-transform: uppercase; }
+  h1 { font-size: 46px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin: var(--space-32) 0 var(--space-12); text-wrap: balance; }
+  .lead { font-size: 17px; line-height: 1.55; color: var(--sub); max-width: 64ch; margin: 0; }
+  h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; margin: var(--space-48) 0 var(--space-16); }
+  button { font: inherit; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: var(--surface); border: var(--stroke-hair) solid var(--stroke); border-radius: var(--radius-node); padding: 8px 14px; cursor: pointer; }
+  button:focus-visible, a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  a { color: var(--link); }
+  .logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-16); }
+  .tile { border-radius: var(--radius-panel); border: var(--stroke-hair) solid var(--rule); background: var(--surface); padding: var(--space-24); display: flex; flex-direction: column; gap: var(--space-12); min-width: 0; }
+  .tile.navy { background: var(--navy); }
+  .tile.light { background: var(--mist); border-color: var(--mist); }
+  .tile.light code { color: var(--navy); }
+  .tile img { height: 56px; width: auto; max-width: 100%; align-self: flex-start; }
+  .tile code { font-family: var(--font-mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+  .tile.navy code { color: var(--code-ink); }
+  .cards { display: flex; flex-direction: column; gap: var(--space-16); }
+  .card { border: var(--stroke-hair) solid var(--rule); border-radius: var(--radius-panel); overflow: hidden; background: var(--bg); }
+  .card-head { display: flex; justify-content: space-between; gap: var(--space-16); padding: var(--space-12) var(--space-16); border-bottom: var(--stroke-hair) solid var(--rule); background: var(--surface); flex-wrap: wrap; }
+  .card-head b { font-weight: 600; } .card-head span { color: var(--muted); font-size: 14px; }
+  .card-body { overflow-x: auto; }
+  iframe { display: block; border: 0; width: 100%; min-width: 900px; }
+  .docs { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-16); }
+  .docs a { display: block; padding: var(--space-16); border: var(--stroke-hair) solid var(--rule); border-radius: var(--radius-node); background: var(--surface); text-decoration: none; color: var(--ink); }
+  .docs a span { display: block; color: var(--muted); font-size: 14px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="lockup" role="img" aria-label="KubeSwift"><svg viewBox="0 0 100 100" aria-hidden="true"><path fill-rule="evenodd" d="M50,4 L89.8,27 L89.8,73 L50,96 L10.2,73 L10.2,27 Z M34,30 L70,50 L34,70 L48,70 L54,50 L48,30 Z"/></svg><span>Kube<b>Swift</b></span></span>
+    <button type="button" id="theme">Theme: system</button>
+  </header>
+  <div class="eyebrow" style="margin-top:var(--space-48)">Design system</div>
+  <h1>KubeSwift design</h1>
+  <p class="lead">Tokens, logos, fonts, diagram rules and slide components for KubeSwift talks, docs and project pages. Every colour comes from <code>tokens/tokens.json</code>.</p>
+
+  <h2>Read first</h2>
+  <div class="docs">
+    <a href="docs/brand.md">Brand book<span>Voice, colour, type, grid, motifs, logo</span></a>
+    <a href="docs/diagrams.md">Diagrams<span>Fill means ownership</span></a>
+    <a href="docs/naming.md">Naming<span>KubeSwift, kinds, tools</span></a>
+    <a href="kits/pptx/">PowerPoint kit<span>Editable diagram shapes, light and dark</span></a>
+  </div>
+
+  <h2>Logos</h2>
+  <div class="logos">
+    <div class="tile light"><img src="assets/logos/kubeswift-horizontal-light.svg" alt="KubeSwift horizontal lockup, light"><code>kubeswift-horizontal-light.svg</code></div>
+    <div class="tile navy"><img src="assets/logos/kubeswift-horizontal-dark.svg" alt="KubeSwift horizontal lockup, dark"><code>kubeswift-horizontal-dark.svg</code></div>
+    <div class="tile light"><img src="assets/logos/kubeswift-stacked-light.svg" alt="KubeSwift stacked lockup, light"><code>kubeswift-stacked-light.svg</code></div>
+    <div class="tile navy"><img src="assets/logos/kubeswift-stacked-dark.svg" alt="KubeSwift stacked lockup, dark"><code>kubeswift-stacked-dark.svg</code></div>
+    <div class="tile light"><img src="assets/logos/kubeswift-mark-azure.svg" alt="KubeSwift mark, azure"><code>kubeswift-mark-azure.svg</code></div>
+    <div class="tile navy"><img src="assets/logos/kubeswift-mark-white.svg" alt="KubeSwift mark, white"><code>kubeswift-mark-white.svg</code></div>
+  </div>
+
+  <h2>Components</h2>
+  <div class="cards" id="cards"></div>
+</div>
+<script>
+  const comps = [
+    ['Lockup', 'Mark plus wordmark'], ['Eyebrow', 'Slide header'], ['DiagramNode', 'Nodes, connectors, groups'],
+    ['Annotation', 'Handwritten aside'], ['Tag', 'Status tags'], ['ColumnHeader', 'Column rule and label'],
+    ['CodePanel', 'Code with one highlighted line'], ['SectionDivider', 'Navy section slide'], ['ChevronLoader', 'Motion'],
+  ];
+  const cards = document.getElementById('cards');
+  const frames = [];
+  for (const [name, sub] of comps) {
+    const card = document.createElement('section');
+    card.className = 'card';
+    card.innerHTML = `<div class="card-head"><b>${name}</b><span>${sub} · <a href="components/${name}/README.md">guidelines</a></span></div><div class="card-body"><iframe title="${name} preview" src="components/${name}/preview.html" loading="lazy"></iframe></div>`;
+    cards.appendChild(card);
+    const f = card.querySelector('iframe');
+    f.addEventListener('load', () => {
+      try { applyTheme(f); f.style.height = f.contentDocument.documentElement.scrollHeight + 'px'; } catch (e) { f.style.height = '240px'; }
+    });
+    frames.push(f);
+  }
+  const order = ['system', 'light', 'dark'];
+  let mode = 'system';
+  try { mode = localStorage.getItem('ks-theme') || 'system'; } catch (e) {}
+  function applyTheme(f) {
+    const root = f ? f.contentDocument.documentElement : document.documentElement;
+    if (mode === 'system') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', mode);
+  }
+  function setMode(m) {
+    mode = m;
+    try { localStorage.setItem('ks-theme', m); } catch (e) {}
+    document.getElementById('theme').textContent = 'Theme: ' + m;
+    applyTheme();
+    frames.forEach((f) => { try { applyTheme(f); } catch (e) {} });
+  }
+  document.getElementById('theme').addEventListener('click', () => setMode(order[(order.indexOf(mode) + 1) % 3]));
+  setMode(mode);
+</script>
+</body>
+</html>
