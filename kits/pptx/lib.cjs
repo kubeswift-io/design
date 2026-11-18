@@ -152,7 +152,7 @@ function makeHelpers(pres, VARIANT) {
     lines.forEach((segs, i) => {
       const pre = o.numbers === false ? [] : [{ text: String(i + 1).padStart(2, ' ') + '   ', options: { color: P['code-muted'] } }];
       const parts = pre.concat(segs.map(([t, k]) => ({ text: t, options: {
-        color: k === 'v' ? P['code-value'] : k === 'k' ? P['code-key'] : k === 'p' ? P['code-value'] : P['code-ink'], bold: k === 'v',
+        color: k === 'v' ? P['code-value'] : k === 'k' ? P['code-key'] : k === 'p' ? P['code-value'] : k === 'c' ? P['code-muted'] : P['code-ink'], bold: k === 'v',
       } })));
       parts[parts.length - 1].options.breakLine = i < lines.length - 1;
       runs.push(...parts);

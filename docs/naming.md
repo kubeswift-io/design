@@ -12,7 +12,7 @@ How to write KubeSwift's names in slides, docs, code samples and the console. Th
 
 Write a kind exactly as the API defines it, in PascalCase and in mono, with no plural "s" glued on: "three `SwiftGuest` resources", not "three SwiftGuests". Short names (`sg`, `sgpool`) are for commands only; never use them in prose or on a diagram node.
 
-There are 22 kinds, all `v1alpha1`, across ten API groups. Every kind carries the `Swift` prefix except `Cluster`; write it as "`Cluster` (fleet)" wherever a Kubernetes reader could take it for a core concept.
+There are 21 kinds, all `v1alpha1`, across ten API groups. Every kind carries the `Swift` prefix except `Cluster`; write it as "`Cluster` (fleet)" wherever a Kubernetes reader could take it for a core concept.
 
 | Kind | Short | API group | Scope | Purpose |
 | --- | --- | --- | --- | --- |

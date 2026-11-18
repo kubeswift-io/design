@@ -12,7 +12,7 @@ Open [`index.html`](index.html) from a checkout to see the logos and every compo
 | [`tokens/tokens.css`](tokens/tokens.css) | CSS custom properties, `@font-face` rules and type classes, generated from `tokens.json`. |
 | [`docs/brand.md`](docs/brand.md) | The brand book: voice, colour, type, grid, motifs, logo, slides, accessibility. |
 | [`docs/diagrams.md`](docs/diagrams.md) | Diagram rules. Fill means ownership. |
-| [`docs/naming.md`](docs/naming.md) | How to write KubeSwift, its 22 kinds and its tools. |
+| [`docs/naming.md`](docs/naming.md) | How to write KubeSwift, its 21 kinds and its tools. |
 | [`docs/status.md`](docs/status.md) | How every phase maps to a status colour. |
 | [`docs/adr/`](docs/adr/) | Design decisions. |
 | [`assets/logos/`](assets/logos/) | Mark and lockups as SVG, wordmark in outlines. |
