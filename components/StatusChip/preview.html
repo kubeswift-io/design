@@ -1,0 +1,19 @@
+<!-- @dsCard group="Labels" height=150 subtitle="A phase coloured by status" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../tokens/tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<title>StatusChip</title>
+<style>
+  .row { display: flex; flex-wrap: wrap; gap: var(--space-12); align-items: center; }
+  .kind { font-family: var(--font-mono); font-size: 13px; color: var(--muted); min-width: 150px; }
+</style></head>
+<body>
+<div class="ks-pad" style="flex-direction:column;align-items:flex-start;gap:var(--space-16)">
+  <div class="row"><span class="kind">SwiftGuest</span><span class="ks-status" data-status="warning">Pending</span><span class="ks-status" data-status="warning">Scheduling</span><span class="ks-status" data-status="success">Running</span><span class="ks-status" data-status="neutral">Stopped</span><span class="ks-status" data-status="danger">Failed</span></div>
+  <div class="row"><span class="kind">SwiftMigration</span><span class="ks-status" data-status="info">StopAndCopy</span><span class="ks-status" data-status="success">Completed</span><span class="ks-status" data-status="neutral">Cancelled</span></div>
+  <div class="row"><span class="kind">SwiftImage</span><span class="ks-status" data-status="info">Importing</span><span class="ks-status" data-status="success">Ready</span></div>
+</div>
+</body>
+</html>

@@ -40,6 +40,7 @@ Paint with the semantic tokens, never with the four brand colours directly:
 - Text on a teal fill is always `on-speed` (navy). Never white on teal: 1.81:1.
 - Lines: `stroke` for diagram borders and arrows, `rule` for decorative dividers only (below 3:1, never an input border), `grid` for the blueprint grid.
 - Focus: a 2px solid `focus` ring with a 2px offset.
+- Status: phase chips use the five `status-*` pairs (success, info, warning, danger, neutral), never the brand colours. The phase-to-status map is in [status.md](status.md).
 
 ## Type
 
@@ -99,3 +100,4 @@ KubeSwift has no icon set. Use the chevron motif, mono labels and tags instead o
 - Text holds 4.5:1 on its ground in both themes; the usage note on each colour token names the grounds and ratios.
 - Known misses kept from the sources: `faint` on light (4.40:1), `code-muted` line numbers (2.84:1), `rule` lines (decorative, below 3:1).
 - Never tell states apart by teal versus blue alone: pair the fill with a label or a dashed border.
+- Status chips always show the phase word; success and danger differ mainly in hue.
