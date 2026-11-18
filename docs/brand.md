@@ -91,6 +91,13 @@ Architecture diagrams are the most used part of this system. The fill of a node 
 - A takeaway line closes a slide when it needs one: a `rule` above, `slide-body` at 700 in `ink`.
 - Code panels: 10 to 14 lines, line numbers in `code-muted`, the one line that matters highlighted with `code-highlight` and its value in `code-value`.
 
+## Charts
+
+- A chart with one series draws it in `accent`; its title or label names it, so it needs no legend. Small multiples of different metrics (the console's sparklines) are one series each and all use `accent`.
+- Status colours are reserved for state. A series that is just a metric never wears `status-*`; a series that means good or bad (an error rate, pass and fail) wears them and nothing else in that chart does.
+- Marks sit on `surface`; grid lines and baselines use `rule`; values and labels use `ink`, `sub` or `muted`, never the series colour.
+- There is no categorical palette yet. The first chart that needs two or more series defines one: hues in a fixed order, a light and a dark step each, validated for colour-vision deficiency and for 3:1 against `surface` in both themes, then added to `tokens.json`. Do not pick series colours by eye.
+
 ## Iconography
 
 KubeSwift has no icon set. Use the chevron motif, mono labels and tags instead of icons. If an icon is unavoidable, use a stroked line icon at `stroke-node` weight in `stroke` or `accent`, never filled, never emoji.
