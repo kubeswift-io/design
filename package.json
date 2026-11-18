@@ -7,10 +7,12 @@
   "scripts": {
     "build": "node scripts/build-tokens.mjs",
     "check": "node scripts/build-tokens.mjs --check && node scripts/check-colors.mjs",
-    "kit": "node kits/pptx/generate.cjs"
+    "kit": "node kits/pptx/generate.cjs && node kits/pptx/template.cjs"
   },
   "devDependencies": {
+    "jszip": "3.10.2",
     "pptxgenjs": "4.0.1",
+    "qrcode": "1.5.4",
     "sharp": "0.35.4"
   },
   "engines": {

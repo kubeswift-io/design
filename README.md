@@ -1,6 +1,6 @@
 # KubeSwift design
 
-The design system for [KubeSwift](https://github.com/kubeswift-io), Kubernetes-native VM orchestration on Cloud Hypervisor: tokens, logos, fonts, diagram rules, slide components and an editable PowerPoint kit.
+The design system for [KubeSwift](https://github.com/kubeswift-io), Kubernetes-native VM orchestration on Cloud Hypervisor: tokens, logos, fonts, diagram rules, slide components, an editable PowerPoint diagram kit and a talk template.
 
 Open [`index.html`](index.html) from a checkout to see the logos and every component in light and dark.
 
@@ -19,7 +19,7 @@ Open [`index.html`](index.html) from a checkout to see the logos and every compo
 | [`assets/motifs/`](assets/motifs/) | Chevron, chevron stream, title-slide hexagon, blueprint grid. |
 | [`fonts/`](fonts/) | Space Grotesk, IBM Plex Mono and Architects Daughter as WOFF2, with their OFL licences. |
 | [`components/`](components/) | Slide and page components: `bundle.css`, plus a preview and guidelines per component. |
-| [`kits/pptx/`](kits/pptx/) | The editable PowerPoint diagram kit, light and dark, and its generator. |
+| [`kits/pptx/`](kits/pptx/) | The PowerPoint talk template and diagram kit, light and dark, and their generators. |
 
 ## Using it
 
@@ -32,7 +32,7 @@ On a web page:
 
 Colours follow the system theme, or set `data-theme="light"` or `data-theme="dark"` on the root element.
 
-In a talk: start from [`kits/pptx/`](kits/pptx/), in the theme your deck uses. Every deck ships in a light and a dark version.
+In a talk: start from the talk template in [`kits/pptx/`](kits/pptx/), in the theme your deck uses, and copy diagram shapes from the kit. Every deck ships in a light and a dark version.
 
 ## Changing it
 
@@ -40,7 +40,7 @@ In a talk: start from [`kits/pptx/`](kits/pptx/), in the theme your deck uses. E
 npm install
 npm run build   # tokens.json -> tokens.css
 npm run check   # tokens.css is current and every hex colour is a token value
-npm run kit     # regenerate the PowerPoint kit
+npm run kit     # regenerate the PowerPoint kit and talk template
 ```
 
 Read [AGENTS.md](AGENTS.md) before changing anything. CI runs `npm run check` and `npm run kit` on every pull request.
