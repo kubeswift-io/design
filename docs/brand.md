@@ -85,7 +85,7 @@ Architecture diagrams are the most used part of this system. The fill of a node 
 
 ## Slides
 
-- Every deck ships in two versions, light and dark, from the same source. Diagrams stay editable shapes in both, never pictures. Start from the [PowerPoint kit](../kits/pptx/).
+- Every deck ships in two versions, light and dark, from the same source. Diagrams stay editable shapes in both, never pictures. Start from the [talk template](../kits/pptx/) and copy diagram shapes from the kit beside it.
 - Structure: title slide (navy, outlined hexagon), section dividers (navy, `slide-numeral` in teal), content slides on the grid, closing slide (navy, takeaways, links, QR).
 - Content slide header: `slide-eyebrow` in `accent` as `NN · LABEL`, then `slide-title` in `ink`, top-left, the same position on every slide. The logo sits top-right at 26px.
 - A takeaway line closes a slide when it needs one: a `rule` above, `slide-body` at 700 in `ink`.
