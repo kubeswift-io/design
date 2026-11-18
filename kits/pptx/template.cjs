@@ -221,7 +221,7 @@ const mono = (text, P) => ({ text, options: { fontFace: MONO, color: P.ink, font
   const P = P0;
   const s = slide('KS Title Only', 'Number slide. One number in accent at display size, its unit and meaning in one line, and the source underneath. Use it for the one figure the audience should repeat.');
   header(s, P, '02 · SCOPE', 'One number, its unit and its source');
-  T(s, '22', { x: X0, y: 2.0, w: 4.2, h: 2.4, fontSize: 150, bold: true, color: P.accent, charSpacing: -6, valign: 'middle', objectName: 'Stat number' });
+  T(s, '21', { x: X0, y: 2.0, w: 4.2, h: 2.4, fontSize: 150, bold: true, color: P.accent, charSpacing: -6, valign: 'middle', objectName: 'Stat number' });
   T(s, 'custom resource kinds, all v1alpha1, across ten API groups', { x: X0 + 4.4, y: 2.55, w: 6.9, h: 1.3, fontSize: 28, bold: true, color: P.ink, charSpacing: -0.5, valign: 'middle', lineSpacingMultiple: 1.05, objectName: 'Stat meaning' });
   rule(s, P, X0, 4.75, XW, false);
   T(s, [{ text: 'Source: ' }, { text: 'config/crd/bases', options: { fontFace: MONO, color: P.sub } }, { text: ' in kubeswift-io/kubeswift' }],
